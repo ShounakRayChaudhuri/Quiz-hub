@@ -1,0 +1,97 @@
+body {
+    background: #121212;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.quiz-container {
+    max-width: 600px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid;
+    animation: glowing-border 2s infinite alternate;
+}
+
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 10px rgb(255, 0, 0);
+        border-color: rgb(255, 0, 0);
+    }
+    50% {
+        box-shadow: 0 0 15px rgb(0, 255, 0);
+        border-color: rgb(0, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 15px rgb(0, 0, 255);
+        border-color: rgb(0, 0, 255);
+    }
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(0, 255, 0), 0 0 15px rgb(0, 0, 255);
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 50px;
+    font-size: 16px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: glowing-button 2s infinite alternate;
+}
+
+@keyframes glowing-button {
+    0% {
+        box-shadow: 0 0 10px rgb(255, 0, 0);
+    }
+    50% {
+        box-shadow: 0 0 15px rgb(0, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 15px rgb(0, 0, 255);
+    }
+}
+
+button:hover {
+    background: #333;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+#controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#timer-container {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
